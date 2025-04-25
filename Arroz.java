@@ -175,13 +175,13 @@ public class Arroz extends JFrame {
  
            
         // Determinar los caramelos de regalo
-           if (MarcaArroz == 1) {
+           if (MarcaArroz == 0) {
                Obsequio = 3;              
            } 
-           else if (MarcaArroz == 2) {
+           else if (MarcaArroz == 1) {
         	   Obsequio = 2;
            }
-           else if (MarcaArroz == 3) {
+           else if (MarcaArroz == 2) {
         	   Obsequio = 2*cantidad;
            }
            else {
