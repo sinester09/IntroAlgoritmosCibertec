@@ -175,13 +175,13 @@ public class Arroz_alineado extends JFrame {
  
            
         // Determinar los caramelos de regalo
-           if (MarcaArroz == 0) {
+           if (MarcaArroz == 1) {
                Obsequio = 3;              
            } 
-           else if (MarcaArroz == 1) {
+           else if (MarcaArroz == 2) {
         	   Obsequio = 2;
            }
-           else if (MarcaArroz == 2) {
+           else if (MarcaArroz == 3) {
         	   Obsequio = 2*cantidad;
            }
            else {
