@@ -175,13 +175,13 @@ public class Arroz extends JFrame {
  
            
         // Determinar los caramelos de regalo
-           if (MarcaArroz == 0) {
+           if (MarcaArroz == 1) {
                Obsequio = 3;              
            } 
-           else if (MarcaArroz == 1) {
+           else if (MarcaArroz == 2) {
         	   Obsequio = 2;
            }
-           else if (MarcaArroz == 2) {
+           else if (MarcaArroz == 3) {
         	   Obsequio = 2*cantidad;
            }
            else {
@@ -218,7 +218,7 @@ public class Arroz extends JFrame {
            resultado += "Importe de Compra: S/. " + importeCompra + "\n";
            resultado += "Porcentaje de Descuento: " + porcentajeDescuento + "%\n";
            resultado += "Importe del Descuento: S/. " + importeDescuento + "\n";
-           resultado += "Importe a Pagar: S/. " + importePagar + "\n\n";
+           resultado += "Importe a Pagar: S/. " + importePagar + "\n";
            resultado += "Obsequios: Caramelos " + Obsequio + " Gomitas " + Obsequio2 + "\n";
  
            txtResultado.setText(resultado);
