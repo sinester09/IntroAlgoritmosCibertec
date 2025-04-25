@@ -194,10 +194,10 @@ public class Arroz extends JFrame {
            if (importePagar < 50) {
                Obsequio2 = 5;              
            } 
-           else if (cantidad >= 50 && cantidad < 100) {
+           else if (importePagar >= 50 && importePagar < 100) {
         	   Obsequio2 = 10;
            }
-           else if (cantidad >= 100 && cantidad <150) {
+           else if (importePagar >= 100 && importePagar <150) {
         	   Obsequio2 = 15;
            }
            else {
