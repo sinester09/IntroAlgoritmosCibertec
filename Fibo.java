@@ -11,8 +11,15 @@ public class Fibo {
 
         // Bucle que se ejecuta mientras 'a' sea menor o igual a 100
         while (a <= 100) {
-            // Imprime el valor de 'a' en cada ciclo (número de la serie de Fibonacci)
-            System.out.println(a);
+            // Usamos un if para manejar el caso cuando 'a' es 0 o 1
+            if (a == 0) {
+                System.out.println(a); // Imprime 0 si 'a' es 0
+            } else if (a == 1) {
+                System.out.println(a); // Imprime 1 si 'a' es 1
+            } else {
+                // Para otros números, imprime normalmente
+                System.out.println(a);
+            }
 
             // Calculamos el siguiente término de la secuencia (que es la suma de 'a' y 'b')
             int siguiente = a + b;
