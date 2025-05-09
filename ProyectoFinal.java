@@ -1,11 +1,11 @@
-package Ejercicios;
+package guis;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
 
-public class ProFinal extends JFrame {
+public class ProyectoFinall extends JFrame {
     private static JTabbedPane pestanas;
     private static JPanel panelJugadores, panelEstadisticas, panelConsultas;
 
@@ -30,7 +30,7 @@ public class ProFinal extends JFrame {
     private JComboBox<String> comboNumeroCamiseta;
     private DefaultComboBoxModel<String> modeloCamiseta;
 
-    public ProFinal() {
+    public ProyectoFinall() {
         setTitle("Estadísticas del club Los Halcones");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -249,9 +249,23 @@ public class ProFinal extends JFrame {
                     JOptionPane.showMessageDialog(null, "Todos los valores deben ser positivos");
                     return;
                 }
+                
+                if (minutos > 80) {
+                    JOptionPane.showMessageDialog(null, "El partido solo puede durar 80 minutos");
+                    return;
+                }
 
                 registrarEstadisticas(index, minutos, triesCount, conversionesCount, penalesCount, dropGoalsCount, faltasCount);
                 JOptionPane.showMessageDialog(null, "Estadísticas registradas correctamente");
+                
+             // Limpiar los campos de texto después de registrar las estadísticas
+                txtMinutos.setText("");
+                txtTries.setText("");
+                txtConversiones.setText("");
+                txtPenales.setText("");
+                txtDropGoals.setText("");
+                txtFaltas.setText("");
+                
             } catch (NumberFormatException ex) {
                 JOptionPane.showMessageDialog(null, "Debes ingresar números válidos en todos los campos");
             }
@@ -548,6 +562,7 @@ public class ProFinal extends JFrame {
     }
 
     public static void main(String[] args) {
-        new ProFinal();
+        new ProyectoFinall();
     }
 }
+
