@@ -1,17 +1,17 @@
-package guis;
+package Ejercicios;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
 
-public class ProyectoFinall extends JFrame {
+public class ProFinal extends JFrame {
     private static JTabbedPane pestanas;
     private static JPanel panelJugadores, panelEstadisticas, panelConsultas;
 
-    private static int[] numerosCamiseta = new int[25];
-    private static String[] nombres = new String[25];
-    private static String[] posiciones = new String[25];
+    private static int[] numerosCamiseta = new int[23];
+    private static String[] nombres = new String[23];
+    private static String[] posiciones = new String[23];
 
     private static int[] partidosJugados = new int[25];
     private static int[] tries = new int[25];
@@ -30,7 +30,7 @@ public class ProyectoFinall extends JFrame {
     private JComboBox<String> comboNumeroCamiseta;
     private DefaultComboBoxModel<String> modeloCamiseta;
 
-    public ProyectoFinall() {
+    public ProFinal() {
         setTitle("Estadísticas del club Los Halcones");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -100,10 +100,10 @@ public class ProyectoFinall extends JFrame {
             comboPosicion.addItem(pos);
         }
 
-        // 🟨 Conjunto para rastrear las posiciones ya usadas
+        //  para rastrear las posiciones ya usadas
         java.util.Set<String> posicionesUsadas = new java.util.HashSet<>();
 
-        // 🎨 Renderer para sombrear posiciones ya utilizadas
+        //  sombrear posiciones ya utilizadas
         comboPosicion.setRenderer(new DefaultListCellRenderer() {
             @Override
             public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
@@ -154,7 +154,7 @@ public class ProyectoFinall extends JFrame {
                 return;
             }
 
-            // ✅ Registrar jugador y marcar la posición como usada
+            // Registrar jugador y marcar la posición como usada
             agregarJugador(numero, nombre, posicion);
             posicionesUsadas.add(posicion); // Agregar posición usada
 
@@ -527,7 +527,7 @@ public class ProyectoFinall extends JFrame {
   
    
     private void agregarJugador(int numero, String nombre, String posicion) {
-        if (cantidadJugadores < 25) {
+        if (cantidadJugadores < 23) {
             numerosCamiseta[cantidadJugadores] = numero;
             nombres[cantidadJugadores] = nombre;
             posiciones[cantidadJugadores] = posicion;
@@ -562,7 +562,6 @@ public class ProyectoFinall extends JFrame {
     }
 
     public static void main(String[] args) {
-        new ProyectoFinall();
+        new ProFinal();
     }
 }
-
